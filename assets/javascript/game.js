@@ -169,7 +169,7 @@ var hangmanGame = {
 	letterClick: function(letter) {
 		console.log(letter);
 		this.userGuess = letter;
-		// document.getElementById(this.userGuess).disabled = true;
+		document.getElementById(this.userGuess).setAttribute("class","now-disabled");
 		this.attemptGuess();
 	},
 	//populate letter buttons
@@ -195,10 +195,10 @@ window.onload = function(event){
 	// });
 	document.onkeyup = function(pressEvent){
 		var guess = pressEvent.key.toUpperCase();
-		// document.getElementById(guess).disabled = true;
 		console.log(guess);
 		if(isLetter(guess)){
 			hangmanGame.userGuess = guess;
+			document.getElementById(guess).setAttribute("class","now-disabled");
 			hangmanGame.attemptGuess();
 		}
 	}

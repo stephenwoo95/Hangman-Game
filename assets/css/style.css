@@ -97,3 +97,14 @@ body{
 	margin: 2px;
 	color: darkcyan;
 }
+
+.now-disabled {
+	width: 30px;
+	height: 30px;
+	border-style: solid;
+	padding: 2px;
+	float: left;
+	margin: 2px;
+	color: darkcyan;
+	background-color: darkred;
+}
